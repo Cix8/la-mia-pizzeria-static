@@ -10,9 +10,9 @@
         public string Image { get; private set; }
         public float Price { get; private set; }
 
-        public PizzaModel(int id, string name, string description, string image, double price)
+        public PizzaModel(string name, string description, string image, double price)
         {
-            Id = id;
+            Id = PizzaModel.idCounter++;
             Name = name;
             Description = description;
             Image = image;

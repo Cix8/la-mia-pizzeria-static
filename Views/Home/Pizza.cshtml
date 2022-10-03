@@ -1,0 +1,22 @@
+﻿@{
+    PizzaModel firstPizza = new PizzaModel("Margherita", "La classica pizza napoletana", "pizza-margherita.jfif", 5.99);
+    PizzaModel secondPizza = new PizzaModel("Capricciosa", "La pizza capricciosa è una pizza tipica della cucina italiana caratterizzata da un condimento di pomodoro, mozzarella, prosciutto cotto, funghi, olive verdi e nere, e carciofini", "pizza-capricciosa.jfif", 7.99);
+    PizzaModel thirdPizza = new PizzaModel("Salame Piccante", "Pizza base margherita con aggiunta di salame piccante", "pizza-salame.jfif", 6.99);
+
+    List<PizzaModel> pizzaList = new List<PizzaModel> { firstPizza, secondPizza, thirdPizza };
+}
+
+
+<ul class="list-group">
+    @foreach (PizzaModel pizza in pizzaList) 
+    {
+        <li class="card my-3" style="width: 18rem;">
+            <img src="~/img/@pizza.Image" class="card-img-top">
+            <div class="card-body">
+                <h2 class="card-title">Pizza @pizza.Name</h2>
+                <p class="card-text">Descrizione: @pizza.Description</p>
+                <span>Prezzo: € @pizza.Price</span>
+            </div>
+        </li>
+    }
+</ul>
