@@ -6,12 +6,13 @@
     List<PizzaModel> pizzaList = new List<PizzaModel> { firstPizza, secondPizza, thirdPizza };
 }
 
+<h1 class="text-center py-4">Le nostre Pizze</h1>
 
-<ul class="list-group">
+<ul class="list-group flex-row">
     @foreach (PizzaModel pizza in pizzaList) 
     {
-        <li class="card my-3" style="width: 18rem;">
-            <img src="~/img/@pizza.Image" class="card-img-top">
+        <li class="card my-3 me-3" style="width: 23rem;">
+            <img src="~/img/@pizza.Image" class="card-img-top" style="height:15rem;">
             <div class="card-body">
                 <h2 class="card-title">Pizza @pizza.Name</h2>
                 <p class="card-text">Descrizione: @pizza.Description</p>
